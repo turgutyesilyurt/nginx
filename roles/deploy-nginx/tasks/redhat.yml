@@ -1,0 +1,13 @@
+---
+- name: yum install nginx
+  debug: msg="yum package manager"
+  
+- name: yum install nginx
+  yum: 
+    name: nginx
+    state: latest
+ 
+- name: start nginx service
+  service: 
+    name: nginx
+    state: started

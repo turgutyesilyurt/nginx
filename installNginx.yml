@@ -1,0 +1,10 @@
+--- 
+#
+# Written By: Turgut Yesilyurt
+#
+- name: master playbook installs nginx
+  hosts: all
+  connection: local
+  vars:
+  roles:
+    - deploy-nginx

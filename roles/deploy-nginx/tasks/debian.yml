@@ -1,0 +1,13 @@
+---
+- name: apt package manager
+  debug: msg="apt package manager called"
+
+- name: ensure nginx is at the latest version
+  apt:
+    name: nginx
+    state: latest
+
+- name: start nginx
+  service: 
+    name: nginx
+    state: started

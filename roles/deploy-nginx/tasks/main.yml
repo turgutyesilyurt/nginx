@@ -1,0 +1,8 @@
+---
+- name: yum package manager
+  import_tasks: redhat.yml
+  when: ansible_pkg_mgr|lower == 'yum'
+
+- name: apt package manager
+  import_tasks: debian.yml
+  when: ansible_pkg_mgr|lower == 'apt'
